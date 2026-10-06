@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Nunito", "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg: #f6faf7;
+  --color-surface: #ffffff;
+  --color-ink: #1c2430;
+  --color-muted: #3a4654;
+  --color-faint: #4e5d6c;
+  --color-line: #d7e2dc;
+  --color-paper: #ffffff;
+  --color-chip: #e5f2ea;
+  --color-accent: #146b42;
+  --color-on-accent: #ffffff;
+
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: clamp(2.25rem, 1.6rem + 2.4vw, 3.25rem);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-bg);
+    background-image: radial-gradient(1200px 520px at 50% -120px, var(--color-chip), transparent);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: 1.6;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+html.dark {
+  color-scheme: dark;
+  --color-bg: #121a16;
+  --color-surface: #1c2822;
+  --color-ink: #f3f7f4;
+  --color-muted: #d5e0da;
+  --color-faint: #b7c4bc;
+  --color-line: #355044;
+  --color-paper: #17241e;
+  --color-chip: #24382e;
+  --color-accent: #8fd4ae;
+  --color-on-accent: #102117;
+}
+
+.reel-name {
+  transition: filter 150ms cubic-bezier(0.22, 1, 0.36, 1), color 150ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reel-name.is-spinning {
+  color: var(--color-muted);
+  filter: blur(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reel-name,
+  .reel-name.is-spinning {
+    filter: none;
+    transition: none;
+  }
+}

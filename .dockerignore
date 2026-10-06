@@ -1,0 +1,7 @@
+node_modules
+.output
+.git
+screenshots
+artifacts
+dist
+*.md

@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Stray Table",
+      "hasCanvas": false,
+      "bodyTextLen": 1261,
+      "bodyTextHash": "e33c220e7841898a2fc823c9fbb7b63b5c2c9860087d4d57d503426c5a076f00",
+      "bodyTextPrefix": "WICHITA METRO Stray Table Stray Pro Where should we eat? Draw a ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Stray Table",
+      "hasCanvas": false,
+      "bodyTextLen": 1261,
+      "bodyTextHash": "e33c220e7841898a2fc823c9fbb7b63b5c2c9860087d4d57d503426c5a076f00",
+      "bodyTextPrefix": "WICHITA METRO Stray Table Stray Pro Where should we eat? Draw a ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
