@@ -1,10 +1,10 @@
-import type { Spot } from "@/data/spots";
+import { isGemEligible, type Spot } from "@/data/spots";
 
 export function chooseSpot(pool: Spot[], leanGems: boolean, avoidId: string | null) {
   if (pool.length === 0) return null;
   let list = avoidId ? pool.filter((s) => s.id !== avoidId) : pool;
   if (list.length === 0) list = pool;
-  const weights = list.map((s) => (leanGems && s.gem ? 3 : 1));
+  const weights = list.map((s) => (leanGems && isGemEligible(s) ? 3 : 1));
   const total = weights.reduce((sum, n) => sum + n, 0);
   let cursor = Math.random() * total;
   for (let i = 0; i < list.length; i++) {
@@ -117,7 +117,7 @@ export function filterSpots(
     if (opts.prices.length && !opts.prices.includes(s.price)) return false;
     if (opts.vibes.length && !s.vibes.some((v) => opts.vibes.includes(v))) return false;
     if (opts.diets.length && !opts.diets.every((d) => s.diet.includes(d as Spot["diet"][number]))) return false;
-    if (opts.gemsOnly && !s.gem) return false;
+    if (opts.gemsOnly && !isGemEligible(s)) return false;
     if (opts.skipBeen && opts.beenIds.includes(s.id)) return false;
     if (!q) return true;
     const hay = `${s.name} ${s.cuisine} ${s.area} ${s.town} ${s.knownFor} ${s.note}${s.truck ? " food truck" : ""}${isFastFood(s) ? " fast food" : ""}${isCoffeeShop(s) ? " coffee shop" : ""}${isBarGrill(s) ? " bar grill" : ""}`.toLowerCase();
