@@ -1,16 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { CHAPTERS, type Marker } from "@/data/history";
-import { SPOTS, type Spot } from "@/data/spots";
+import { SPOTS, type Spot } from "@/data/catalog";
 import { historicYear } from "@/lib/draw";
 import { mapsUrl } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ThemeButton } from "@/components/theme-button";
+import { HistorySources } from "@/components/app-chrome";
 
 export const Route = createFileRoute("/history")({
   head: () => ({
     meta: [
-      { title: "Culinary history — Stray Table" },
+      { title: "Culinary history — DinnerDraw" },
       {
         name: "description",
         content:
@@ -87,9 +88,9 @@ function HistoryPage() {
     <div className="min-h-screen bg-bg text-ink">
       <header className="mx-auto flex max-w-3xl items-center justify-between gap-4 px-4 pt-6 pb-2">
         <div>
-          <p className="text-xs font-medium tracking-wide text-muted uppercase">Wichita metro</p>
+          <p className="text-xs font-medium tracking-wide text-muted uppercase">Random restaurant picker</p>
           <Link to="/" className="font-display text-xl leading-none font-medium tracking-tight">
-            Stray Table
+            DinnerDraw
           </Link>
         </div>
         <div className="flex items-center gap-2">
@@ -220,12 +221,7 @@ function HistoryPage() {
           ) : null}
         </section>
 
-        <p className="mt-8 text-xs leading-relaxed text-faint">
-          Drawn from Denise Neil's 2016 survey of Wichita's oldest restaurants in the Wichita Eagle,
-          the Kansas Sampler Foundation's note on NuWay, Visit Wichita's accounts of White Castle,
-          Pizza Hut, and the Dockum sit-in, and the restaurants' own histories. Livingston's opened in
-          1910 at 310 North Emporia. Neither current location is that address. Confirm hours before you go.
-        </p>
+        <HistorySources />
       </main>
     </div>
   );
