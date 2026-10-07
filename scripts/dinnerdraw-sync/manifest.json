@@ -1,31 +1,52 @@
 [
   {
+    "path": "src/styles.css",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__styles.css.part0.b64"
+    ],
+    "bytes": 8044
+  },
+  {
     "path": "src/components/picker.tsx",
     "parts": [
       "scripts/dinnerdraw-sync/src__components__picker.tsx.part0.b64"
     ],
-    "bytes": 14316
+    "bytes": 14612
   },
   {
     "path": "src/components/picker-draw-card.tsx",
     "parts": [
       "scripts/dinnerdraw-sync/src__components__picker-draw-card.tsx.part0.b64"
     ],
-    "bytes": 9230
+    "bytes": 9454
+  },
+  {
+    "path": "src/components/draw-stage.tsx",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__components__draw-stage.tsx.part0.b64"
+    ],
+    "bytes": 2286
+  },
+  {
+    "path": "src/components/theme-button.tsx",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__components__theme-button.tsx.part0.b64"
+    ],
+    "bytes": 907
+  },
+  {
+    "path": "src/routes/__root.tsx",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__routes____root.tsx.part0.b64"
+    ],
+    "bytes": 2006
   },
   {
     "path": "src/components/picker-filters.tsx",
     "parts": [
       "scripts/dinnerdraw-sync/src__components__picker-filters.tsx.part0.b64"
     ],
-    "bytes": 11371
-  },
-  {
-    "path": "src/components/picker-saved.tsx",
-    "parts": [
-      "scripts/dinnerdraw-sync/src__components__picker-saved.tsx.part0.b64"
-    ],
-    "bytes": 4046
+    "bytes": 11349
   },
   {
     "path": "scripts/fix-css-asset.mjs",
