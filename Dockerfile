@@ -1,7 +1,7 @@
 FROM node:22-bookworm-slim AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm install
 COPY . .
 ENV NITRO_PRESET=node_server
 RUN npm run build
