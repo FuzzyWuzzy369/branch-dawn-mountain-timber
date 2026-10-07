@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Stray Table">
-  <rect width="32" height="32" rx="8" fill="#e5f2ea"/>
-  <path fill="#146b42" d="M6.5 8h19v3.6h-19z"/>
-  <path fill="#146b42" d="M14.2 8h3.6v16.2h-3.6z"/>
+  <rect width="32" height="32" rx="8" fill="#ffe0cc"/>
+  <path fill="#d9480f" d="M6.5 8h19v3.6h-19z"/>
+  <path fill="#d9480f" d="M14.2 8h3.6v16.2h-3.6z"/>
 </svg>
