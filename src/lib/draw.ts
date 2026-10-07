@@ -1,4 +1,5 @@
-import { isGemEligible, type Spot } from "@/data/spots";
+import type { Spot } from "@/data/spots";
+import { isGemEligible } from "@/data/shelf";
 
 export function chooseSpot(pool: Spot[], leanGems: boolean, avoidId: string | null) {
   if (pool.length === 0) return null;
