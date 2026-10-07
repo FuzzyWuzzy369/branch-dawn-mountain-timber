@@ -3,34 +3,35 @@ import { Button } from "@/components/ui/button";
 
 const THEME_KEY = "stray-table-theme";
 
-function applyTheme(dark: boolean) {
-  document.documentElement.classList.toggle("dark", dark);
+function applyTheme(light: boolean) {
+  document.documentElement.classList.toggle("light", light);
+  document.documentElement.classList.remove("dark");
   try {
-    localStorage.setItem(THEME_KEY, dark ? "dark" : "light");
+    localStorage.setItem(THEME_KEY, light ? "light" : "dark");
   } catch {
     /* private mode can block storage */
   }
 }
 
 export function ThemeButton() {
-  const [dark, setDark] = useState(false);
+  const [light, setLight] = useState(false);
 
   useEffect(() => {
-    setDark(document.documentElement.classList.contains("dark"));
+    setLight(document.documentElement.classList.contains("light"));
   }, []);
 
   return (
     <Button
       variant="secondary"
       size="sm"
-      aria-pressed={dark}
+      aria-pressed={light}
       onClick={() => {
-        const next = !document.documentElement.classList.contains("dark");
+        const next = !document.documentElement.classList.contains("light");
         applyTheme(next);
-        setDark(next);
+        setLight(next);
       }}
     >
-      {dark ? "Light" : "Dark"}
+      {light ? "Casino" : "Cream"}
     </Button>
   );
 }
