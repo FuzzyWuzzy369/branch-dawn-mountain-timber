@@ -3,7 +3,7 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Stray Table";
+const APP_NAME = "DinnerDraw";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -11,11 +11,11 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: APP_NAME },
-      { name: "theme-color", content: "#f6faf7" },
+      { name: "theme-color", content: "#fff4ec" },
       {
         name: "description",
         content:
-          "Draw a restaurant in the Wichita, Kansas metro. Narrow by town, neighborhood, and cuisine, and lean toward lesser-known tables.",
+          "DinnerDraw — a random restaurant picker for the Wichita, Kansas metro. Narrow by town, neighborhood, and cuisine, and lean toward lesser-known tables.",
       },
     ],
     links: [
