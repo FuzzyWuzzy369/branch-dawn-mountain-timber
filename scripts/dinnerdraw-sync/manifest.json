@@ -1,0 +1,47 @@
+[
+  {
+    "path": "src/components/picker.tsx",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__components__picker.tsx.part0.b64"
+    ],
+    "bytes": 14316
+  },
+  {
+    "path": "src/components/picker-draw-card.tsx",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__components__picker-draw-card.tsx.part0.b64"
+    ],
+    "bytes": 9230
+  },
+  {
+    "path": "src/components/picker-filters.tsx",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__components__picker-filters.tsx.part0.b64"
+    ],
+    "bytes": 11371
+  },
+  {
+    "path": "src/components/picker-saved.tsx",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__components__picker-saved.tsx.part0.b64"
+    ],
+    "bytes": 4046
+  },
+  {
+    "path": "src/data/spots.ts",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__data__spots.ts.part0.b64",
+      "scripts/dinnerdraw-sync/src__data__spots.ts.part1.b64",
+      "scripts/dinnerdraw-sync/src__data__spots.ts.part2.b64",
+      "scripts/dinnerdraw-sync/src__data__spots.ts.part3.b64"
+    ],
+    "bytes": 102168
+  },
+  {
+    "path": "scripts/fix-css-asset.mjs",
+    "parts": [
+      "scripts/dinnerdraw-sync/scripts__fix-css-asset.mjs.part0.b64"
+    ],
+    "bytes": 1916
+  }
+]
