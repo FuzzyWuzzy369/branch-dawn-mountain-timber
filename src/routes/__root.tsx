@@ -11,7 +11,7 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: APP_NAME },
-      { name: "theme-color", content: "#fff4ec" },
+      { name: "theme-color", content: "#0b101e" },
       {
         name: "description",
         content:
@@ -37,7 +37,7 @@ export const Route = createRootRoute({
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "try{if(localStorage.getItem('stray-table-theme')==='dark')document.documentElement.classList.add('dark')}catch(e){}",
+              "try{var t=localStorage.getItem('stray-table-theme');if(t==='light')document.documentElement.classList.add('light');else document.documentElement.classList.remove('light')}catch(e){}",
           }}
         />
         <HeadContent />
