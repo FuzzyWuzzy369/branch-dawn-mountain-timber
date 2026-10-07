@@ -28,16 +28,6 @@
     "bytes": 4046
   },
   {
-    "path": "src/data/spots.ts",
-    "parts": [
-      "scripts/dinnerdraw-sync/src__data__spots.ts.part0.b64",
-      "scripts/dinnerdraw-sync/src__data__spots.ts.part1.b64",
-      "scripts/dinnerdraw-sync/src__data__spots.ts.part2.b64",
-      "scripts/dinnerdraw-sync/src__data__spots.ts.part3.b64"
-    ],
-    "bytes": 102168
-  },
-  {
     "path": "scripts/fix-css-asset.mjs",
     "parts": [
       "scripts/dinnerdraw-sync/scripts__fix-css-asset.mjs.part0.b64"
