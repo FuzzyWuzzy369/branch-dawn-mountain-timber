@@ -1,9 +1,18 @@
 import { createServerFn } from "@tanstack/react-start";
+import { PRO_PRICE_MONTHLY, PRO_PRICE_ONCE } from "@/lib/limits";
 
 export type Billing = {
   paymentsLive: boolean;
   checkoutUrl: string | null;
+  /** Once SKU checkout (preferred power-user path). */
+  checkoutUrlOnce: string | null;
+  /** Monthly SKU checkout ($0.99/mo). */
+  checkoutUrlMonthly: string | null;
   priceLabel: string;
+  priceLabelOnce: string;
+  priceLabelMonthly: string;
+  /** Yearly is held/hidden for day-one. */
+  yearlyHeld: true;
   preview: boolean;
   restoreEnabled: boolean;
 };
@@ -21,11 +30,18 @@ function safeHttps(url: string | undefined) {
 
 export const getBilling = createServerFn({ method: "GET" }).handler(async (): Promise<Billing> => {
   const { env, isWorkspacePreview } = await import("@/lib/env.server");
-  const checkoutUrl = safeHttps(env("STRIPE_PAYMENT_LINK"));
+  const checkoutUrlOnce = safeHttps(env("STRIPE_PAYMENT_LINK") ?? env("STRIPE_PAYMENT_LINK_ONCE"));
+  const checkoutUrlMonthly = safeHttps(env("STRIPE_PAYMENT_LINK_MONTHLY"));
+  const checkoutUrl = checkoutUrlOnce ?? checkoutUrlMonthly;
   return {
     paymentsLive: Boolean(checkoutUrl),
     checkoutUrl,
-    priceLabel: env("PRO_PRICE_LABEL") ?? "$6 once",
+    checkoutUrlOnce,
+    checkoutUrlMonthly,
+    priceLabel: env("PRO_PRICE_LABEL") ?? PRO_PRICE_ONCE,
+    priceLabelOnce: env("PRO_PRICE_LABEL_ONCE") ?? PRO_PRICE_ONCE,
+    priceLabelMonthly: env("PRO_PRICE_LABEL_MONTHLY") ?? PRO_PRICE_MONTHLY,
+    yearlyHeld: true,
     preview: isWorkspacePreview(),
     restoreEnabled: Boolean(env("PRO_RESTORE_CODE")),
   };
