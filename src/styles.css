@@ -4,15 +4,16 @@
   --font-display: "Nunito", "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
 
-  --color-bg: #f6faf7;
+  /* Warm dinner-night energy: cream base, coral accent, readable ink */
+  --color-bg: #fff4ec;
   --color-surface: #ffffff;
-  --color-ink: #1c2430;
-  --color-muted: #3a4654;
-  --color-faint: #4e5d6c;
-  --color-line: #d7e2dc;
-  --color-paper: #ffffff;
-  --color-chip: #e5f2ea;
-  --color-accent: #146b42;
+  --color-ink: #1f1612;
+  --color-muted: #5c4336;
+  --color-faint: #735544;
+  --color-line: #edd5c4;
+  --color-paper: #fffaf6;
+  --color-chip: #ffe0cc;
+  --color-accent: #d9480f;
   --color-on-accent: #ffffff;
 
   --radius-sm: 0.75rem;
@@ -63,16 +64,16 @@
 
 html.dark {
   color-scheme: dark;
-  --color-bg: #121a16;
-  --color-surface: #1c2822;
-  --color-ink: #f3f7f4;
-  --color-muted: #d5e0da;
-  --color-faint: #b7c4bc;
-  --color-line: #355044;
-  --color-paper: #17241e;
-  --color-chip: #24382e;
-  --color-accent: #8fd4ae;
-  --color-on-accent: #102117;
+  --color-bg: #1a1210;
+  --color-surface: #271c18;
+  --color-ink: #fff6ef;
+  --color-muted: #e8d4c6;
+  --color-faint: #c9b0a0;
+  --color-line: #4d342a;
+  --color-paper: #201612;
+  --color-chip: #3d261c;
+  --color-accent: #ff8f5c;
+  --color-on-accent: #1a100c;
 }
 
 .reel-name {
