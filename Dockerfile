@@ -4,7 +4,8 @@ COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
 ENV NITRO_PRESET=node_server
-RUN npm run build
+RUN npm run build \
+  && node scripts/fix-css-asset.mjs
 
 FROM node:22-bookworm-slim
 WORKDIR /app
