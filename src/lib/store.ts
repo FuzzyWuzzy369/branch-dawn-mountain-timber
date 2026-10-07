@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import type { NudgeState } from "@/lib/limits";
 
 type Persisted = {
   town: string;
@@ -14,8 +15,11 @@ type Persisted = {
   skipBeen: boolean;
   favoriteIds: string[];
   beenIds: string[];
+  /** Locally hidden after "Not a fit" — immediate for this reporter only. */
+  hiddenIds: string[];
   pro: boolean;
   drawsByDay: Record<string, number>;
+  nudge: NudgeState;
 };
 
 type Store = Persisted & {
@@ -37,6 +41,8 @@ type Store = Persisted & {
   toggleBeen: (id: string) => void;
   setPro: (value: boolean) => void;
   recordDraw: (day: string) => void;
+  hideSpot: (id: string) => void;
+  setNudge: (nudge: NudgeState) => void;
   clearNarrowing: () => void;
 };
 
@@ -104,8 +110,10 @@ export const useTable = create<Store>()(
       savedIds: [],
       favoriteIds: [],
       beenIds: [],
+      hiddenIds: [],
       pro: false,
       drawsByDay: {},
+      nudge: {},
       hydrated: false,
       setHydrated: (hydrated) => set({ hydrated }),
       setTown: (town) => set({ town, area: "Any" }),
@@ -153,12 +161,15 @@ export const useTable = create<Store>()(
       setPro: (pro) => set({ pro }),
       recordDraw: (day) =>
         set((s) => ({ drawsByDay: { ...s.drawsByDay, [day]: (s.drawsByDay[day] ?? 0) + 1 } })),
+      hideSpot: (id) =>
+        set((s) => (s.hiddenIds.includes(id) ? s : { hiddenIds: [...s.hiddenIds, id] })),
+      setNudge: (nudge) => set({ nudge }),
       clearNarrowing: () => set({ ...emptyNarrow, leanGems: true, skipBeen: false }),
     }),
     {
       name: STORAGE_KEY,
       skipHydration: true,
-      version: 2,
+      version: 3,
       storage: {
         getItem: (name) => {
           if (typeof window === "undefined") return null;
@@ -202,6 +213,12 @@ export const useTable = create<Store>()(
         if (!state.service) state.service = state.trucksOnly ? "truck" : "brick";
         if (version < 2 && state.service === "any") state.service = "brick";
         if (!state.favoriteIds) state.favoriteIds = [];
+        if (!("hiddenIds" in state) || !Array.isArray((state as { hiddenIds?: unknown }).hiddenIds)) {
+          (state as { hiddenIds: string[] }).hiddenIds = [];
+        }
+        if (!("nudge" in state) || typeof (state as { nudge?: unknown }).nudge !== "object") {
+          (state as { nudge: NudgeState }).nudge = {};
+        }
         delete state.savedIds;
         const kept = readLists();
         if (kept) {
@@ -228,8 +245,10 @@ export const useTable = create<Store>()(
         skipBeen: s.skipBeen,
         favoriteIds: s.favoriteIds,
         beenIds: s.beenIds,
+        hiddenIds: s.hiddenIds,
         pro: s.pro,
         drawsByDay: s.drawsByDay,
+        nudge: s.nudge,
       }),
       onRehydrateStorage: () => (state) => {
         const kept = readLists();
