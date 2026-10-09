@@ -4,14 +4,14 @@
     "parts": [
       "scripts/dinnerdraw-sync/src__styles.css.part0.b64"
     ],
-    "bytes": 8741
+    "bytes": 9599
   },
   {
     "path": "src/components/picker.tsx",
     "parts": [
       "scripts/dinnerdraw-sync/src__components__picker.tsx.part0.b64"
     ],
-    "bytes": 16575
+    "bytes": 17190
   },
   {
     "path": "src/components/picker-draw-card.tsx",
