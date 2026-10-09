@@ -20,6 +20,17 @@
     "sha256": "b6665200e7fcbfae682c33e89d3497e056822aa345ac987961472ab164779f8c"
   },
   {
+    "path": "src/components/picker.tsx",
+    "bytes": 17028,
+    "sha256": "d469580de673bde17159580698353c7119a0985948be7ae696c304ba059db21c",
+    "edits": [
+      {
+        "find": "  \"Corporate Catering\",\n]);",
+        "replace": "  \"Corporate Catering\",\n  \"Lebanese\",\n]);"
+      }
+    ]
+  },
+  {
     "path": "src/components/picker-draw-card.tsx",
     "parts": [
       "scripts/dinnerdraw-sync/src__components__picker-draw-card.tsx.part0.b64"
@@ -80,8 +91,8 @@
     "parts": [
       "scripts/dinnerdraw-sync/src__data__catalog.ts.part0.b64"
     ],
-    "bytes": 1649,
-    "sha256": "440b69492ca0a8a3e627845373adaf0dd6624888f72e5b33884f9af58dedb582"
+    "bytes": 2068,
+    "sha256": "1ac8e1748464d2764a1116c9b0328b98ebfaeb18a59b7ff892e9c331bf57d56b"
   },
   {
     "path": "src/data/scraped-coords.ts",
@@ -120,8 +131,8 @@
   },
   {
     "path": "src/data/spots.ts",
-    "bytes": 102173,
-    "sha256": "2fed286992d0c232eaa2fedc21a9a119e5b4849274cd62b99ea7b78a47b9a3d6",
+    "bytes": 102213,
+    "sha256": "81ba80f60d7486638082e1303f95eb94c2a06d0c32a1153c381b08ee2bb5b13f",
     "edits": [
       {
         "find": "from \"./scraped\";\n\nexport type Price",
@@ -144,6 +155,38 @@
       {
         "find": "name: \"Bella Luna Cafe\",\n    town: W,\n    area: \"Waterfront\",\n    county: SG,\n    cuisine: \"Lebanese\",",
         "replace": "name: \"Bella Luna Cafe\",\n    town: W,\n    area: \"Waterfront\",\n    county: SG,\n    cuisine: \"Mediterranean\","
+      },
+      {
+        "find": "cuisine: \"Lebanese\",",
+        "replace": "cuisine: \"Mediterranean\","
+      },
+      {
+        "find": "cuisine: \"Lebanese\",",
+        "replace": "cuisine: \"Mediterranean\","
+      },
+      {
+        "find": "cuisine: \"Lebanese\",",
+        "replace": "cuisine: \"Mediterranean\","
+      },
+      {
+        "find": "cuisine: \"Lebanese\",",
+        "replace": "cuisine: \"Mediterranean\","
+      },
+      {
+        "find": "cuisine: \"Lebanese\",",
+        "replace": "cuisine: \"Mediterranean\","
+      },
+      {
+        "find": "cuisine: \"Lebanese\",",
+        "replace": "cuisine: \"Mediterranean\","
+      },
+      {
+        "find": "cuisine: \"Lebanese\",",
+        "replace": "cuisine: \"Mediterranean\","
+      },
+      {
+        "find": "cuisine: \"Lebanese\",",
+        "replace": "cuisine: \"Mediterranean\","
       }
     ]
   }
