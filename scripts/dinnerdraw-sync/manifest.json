@@ -120,8 +120,8 @@
   },
   {
     "path": "src/data/spots.ts",
-    "bytes": 102168,
-    "sha256": "9b31088e81c33da6724a2d23dd933ce8dd7a515923675e10b22595e9c09465a0",
+    "bytes": 102173,
+    "sha256": "2fed286992d0c232eaa2fedc21a9a119e5b4849274cd62b99ea7b78a47b9a3d6",
     "edits": [
       {
         "find": "from \"./scraped\";\n\nexport type Price",
@@ -140,6 +140,10 @@
       {
         "find": "].filter((spot) => !isChainFastFood(spot.name));",
         "replace": "]);\n\nrememberShelfCounts(SPOTS);"
+      },
+      {
+        "find": "name: \"Bella Luna Cafe\",\n    town: W,\n    area: \"Waterfront\",\n    county: SG,\n    cuisine: \"Lebanese\",",
+        "replace": "name: \"Bella Luna Cafe\",\n    town: W,\n    area: \"Waterfront\",\n    county: SG,\n    cuisine: \"Mediterranean\","
       }
     ]
   }
