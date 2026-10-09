@@ -4,77 +4,112 @@
     "parts": [
       "scripts/dinnerdraw-sync/src__styles.css.part0.b64"
     ],
-    "bytes": 9683
+    "bytes": 9683,
+    "sha256": "9507a47e6d115f38188993bc9477457053f2f7f309b1dd8355f19221ac213407"
   },
   {
     "path": "src/components/picker.tsx",
     "parts": [
       "scripts/dinnerdraw-sync/src__components__picker.tsx.part0.b64"
     ],
-    "bytes": 17051
+    "bytes": 17014,
+    "sha256": "b6665200e7fcbfae682c33e89d3497e056822aa345ac987961472ab164779f8c"
   },
   {
     "path": "src/components/picker-draw-card.tsx",
     "parts": [
       "scripts/dinnerdraw-sync/src__components__picker-draw-card.tsx.part0.b64"
     ],
-    "bytes": 10016
+    "bytes": 10016,
+    "sha256": "21e0e40e62cfeb0fb67992516371ab8a7c7e77b2fd980cf26440d82083f25e7a"
   },
   {
     "path": "src/components/draw-stage.tsx",
     "parts": [
       "scripts/dinnerdraw-sync/src__components__draw-stage.tsx.part0.b64"
     ],
-    "bytes": 3144
+    "bytes": 3144,
+    "sha256": "26ae59cb2148ad852b7f0e60aae3eeb44c26f09a608991d9fa6c165c0b9022cf"
   },
   {
     "path": "src/components/theme-button.tsx",
     "parts": [
       "scripts/dinnerdraw-sync/src__components__theme-button.tsx.part0.b64"
     ],
-    "bytes": 997
+    "bytes": 997,
+    "sha256": "b64159c511592711c2dcf5efb7352baecca07ff78d66da24fdbb6cadb3b7c586"
   },
   {
     "path": "src/routes/__root.tsx",
     "parts": [
       "scripts/dinnerdraw-sync/src__routes____root.tsx.part0.b64"
     ],
-    "bytes": 2053
+    "bytes": 2053,
+    "sha256": "beb41343a32c6b1310bb2ff7a17cf979fe77d9ca14ec854bb1107d8f59c6a4d5"
   },
   {
     "path": "src/components/picker-filters.tsx",
     "parts": [
       "scripts/dinnerdraw-sync/src__components__picker-filters.tsx.part0.b64"
     ],
-    "bytes": 11423
+    "bytes": 11423,
+    "sha256": "fd1023238c5981f71ac1dfa7fac427d7348f8da8fcd254efbce3543409069d0f"
   },
   {
     "path": "scripts/fix-css-asset.mjs",
     "parts": [
       "scripts/dinnerdraw-sync/scripts__fix-css-asset.mjs.part0.b64"
     ],
-    "bytes": 1916
+    "bytes": 1916,
+    "sha256": "582c7cc2e7b6e1356c507b9ae0f8cac7e530bfd4fe2d825aa591711df08036bd"
   },
   {
     "path": "src/data/areas.ts",
     "parts": [
       "scripts/dinnerdraw-sync/src__data__areas.ts.part0.b64"
     ],
-    "bytes": 3448
+    "bytes": 3448,
+    "sha256": "e50b99792803ddbc6ab5126e2a28b5129a77717f2ad1248ae5fb23944d0373a6"
   },
   {
     "path": "src/data/catalog.ts",
     "parts": [
       "scripts/dinnerdraw-sync/src__data__catalog.ts.part0.b64"
     ],
-    "bytes": 1276
+    "bytes": 1649,
+    "sha256": "440b69492ca0a8a3e627845373adaf0dd6624888f72e5b33884f9af58dedb582"
   },
   {
     "path": "src/data/scraped-coords.ts",
     "parts": [
       "scripts/dinnerdraw-sync/src__data__scraped-coords.ts.part0.b64"
     ],
-    "bytes": 35956
+    "bytes": 35956,
+    "sha256": "03fb0cf90dee66fbe0c84400b5cb2e88b333c78562b43d2e493093aa67dcb8e2"
+  },
+  {
+    "path": "src/data/additions.ts",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__data__additions.ts.part0.b64"
+    ],
+    "bytes": 8582,
+    "sha256": "375eac369db2d1d76ba5937f4fada3b0a2a9eb5825d2c7987f035faacb0f0828"
+  },
+  {
+    "path": "src/data/shelf.ts",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__data__shelf.ts.part0.b64"
+    ],
+    "bytes": 3935,
+    "sha256": "200073bf2e137f68da9ecd790de53bbbd5d6f5996b4c4c918ee392c1ed0b3d6c"
+  },
+  {
+    "path": "src/lib/draw.ts",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__lib__draw.ts.part0.b64"
+    ],
+    "bytes": 5305,
+    "sha256": "5bbba6eece0d1c20914dbce96ef440380029bada47b54cc227dfea72f8739cf0"
   },
   {
     "path": "src/data/spots.ts",
