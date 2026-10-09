@@ -11,7 +11,7 @@
     "parts": [
       "scripts/dinnerdraw-sync/src__components__picker.tsx.part0.b64"
     ],
-    "bytes": 16558
+    "bytes": 16575
   },
   {
     "path": "src/components/picker-draw-card.tsx",
