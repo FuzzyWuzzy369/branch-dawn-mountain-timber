@@ -60,7 +60,7 @@
     "parts": [
       "scripts/dinnerdraw-sync/src__data__areas.ts.part0.b64"
     ],
-    "bytes": 3119
+    "bytes": 3448
   },
   {
     "path": "src/data/catalog.ts",
@@ -75,5 +75,30 @@
       "scripts/dinnerdraw-sync/src__data__scraped-coords.ts.part0.b64"
     ],
     "bytes": 35956
+  },
+  {
+    "path": "src/data/spots.ts",
+    "bytes": 102168,
+    "sha256": "9b31088e81c33da6724a2d23dd933ce8dd7a515923675e10b22595e9c09465a0",
+    "edits": [
+      {
+        "find": "from \"./scraped\";\n\nexport type Price",
+        "replace": "from \"./scraped\";\nimport { filterChainQsr, rememberShelfCounts } from \"./shelf\";\nexport { isGemEligible, OSM_ATTRIBUTION } from \"./shelf\";\n\nexport type Price"
+      },
+      {
+        "cut": [
+          "/** National and regional quick-service chains. Freddy's stays. Local counters stay. */\n",
+          "  return false;\n}\n"
+        ]
+      },
+      {
+        "find": "export const SPOTS: Spot[] = [\n",
+        "replace": "export const SPOTS: Spot[] = filterChainQsr([\n"
+      },
+      {
+        "find": "].filter((spot) => !isChainFastFood(spot.name));",
+        "replace": "]);\n\nrememberShelfCounts(SPOTS);"
+      }
+    ]
   }
 ]
