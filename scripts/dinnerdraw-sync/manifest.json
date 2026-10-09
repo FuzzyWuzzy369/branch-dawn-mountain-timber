@@ -54,5 +54,26 @@
       "scripts/dinnerdraw-sync/scripts__fix-css-asset.mjs.part0.b64"
     ],
     "bytes": 1916
+  },
+  {
+    "path": "src/data/areas.ts",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__data__areas.ts.part0.b64"
+    ],
+    "bytes": 3119
+  },
+  {
+    "path": "src/data/catalog.ts",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__data__catalog.ts.part0.b64"
+    ],
+    "bytes": 1276
+  },
+  {
+    "path": "src/data/scraped-coords.ts",
+    "parts": [
+      "scripts/dinnerdraw-sync/src__data__scraped-coords.ts.part0.b64"
+    ],
+    "bytes": 35956
   }
 ]
