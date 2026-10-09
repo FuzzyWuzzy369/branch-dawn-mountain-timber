@@ -72,8 +72,8 @@
     "parts": [
       "scripts/dinnerdraw-sync/src__data__areas.ts.part0.b64"
     ],
-    "bytes": 3448,
-    "sha256": "e50b99792803ddbc6ab5126e2a28b5129a77717f2ad1248ae5fb23944d0373a6"
+    "bytes": 3645,
+    "sha256": "1c3e5a9841152557e9de67b781b17385c47545db802f7afee0913ab88d9c6c95"
   },
   {
     "path": "src/data/catalog.ts",
@@ -95,10 +95,11 @@
     "path": "src/data/additions.ts",
     "parts": [
       "scripts/dinnerdraw-sync/src__data__additions.ts.part0.b64",
-      "scripts/dinnerdraw-sync/src__data__additions.ts.part1.b64"
+      "scripts/dinnerdraw-sync/src__data__additions.ts.part1.b64",
+      "scripts/dinnerdraw-sync/src__data__additions.ts.part2.b64"
     ],
-    "bytes": 8905,
-    "sha256": "26735637ea84cbf253cb79b481bed7a37975474b7fcb25923ffb4aa3e8a1f956"
+    "bytes": 11186,
+    "sha256": "a2657d2a937cfe2ae017b112378488c4f24f4176773393a34548a51b4bb17637"
   },
   {
     "path": "src/data/shelf.ts",
@@ -111,10 +112,11 @@
   {
     "path": "src/lib/draw.ts",
     "parts": [
-      "scripts/dinnerdraw-sync/src__lib__draw.ts.part0.b64"
+      "scripts/dinnerdraw-sync/src__lib__draw.ts.part0.b64",
+      "scripts/dinnerdraw-sync/src__lib__draw.ts.part1.b64"
     ],
-    "bytes": 5305,
-    "sha256": "5bbba6eece0d1c20914dbce96ef440380029bada47b54cc227dfea72f8739cf0"
+    "bytes": 5328,
+    "sha256": "f0ce06122c5cc7afe47c4b69db4d0273ac75ff957cfc979c75e4df4090fff60f"
   },
   {
     "path": "src/data/spots.ts",
