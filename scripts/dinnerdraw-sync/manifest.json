@@ -115,8 +115,8 @@
       "scripts/dinnerdraw-sync/src__lib__draw.ts.part0.b64",
       "scripts/dinnerdraw-sync/src__lib__draw.ts.part1.b64"
     ],
-    "bytes": 5328,
-    "sha256": "f0ce06122c5cc7afe47c4b69db4d0273ac75ff957cfc979c75e4df4090fff60f"
+    "bytes": 5613,
+    "sha256": "678febe043feb170f9a15403262711c77d3387c9b215e726f07c70d831f743ad"
   },
   {
     "path": "src/data/spots.ts",
